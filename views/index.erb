@@ -3,12 +3,18 @@
 
 <div class="row">
 <% @products.each do |p| %>
+	
   	<div class="col-xs-12 col-md-4 col-sm-6">
+  		<a href="/pizza/<%= p.id %>" style="text-decoration: none" title="<%= p.description %>">
   		<center>
   		<img src='<%= p.path_to_image %>' width="220px" height="150px">
   		<h3><%= p.title %></h3>
-  		<h4 style="color: red"><%= p.price %> рублей</h4>
+  		<h4 style="color: red">Размер: <%= p.size %> см <br><%= p.price %> рублей</h4>
+  		</a>
+  		<button class="btn btn-sm btn-success">Добавить в корзину</button>
+  		<br><br>
   		</center>
   	</div>
+  	
 <% end %>
 </div>

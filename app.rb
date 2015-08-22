@@ -24,3 +24,13 @@ end
 get '/about' do
 	erb :about
 end
+
+get '/pizza/:id' do
+	@products = Product.find params[:id]
+	@p = @products
+	erb :pizza
+end
+
+get '/contacts' do
+  erb :contacts
+end
