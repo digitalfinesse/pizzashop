@@ -1,2 +1,14 @@
-<h2>Добро пожаловать в магазин пиццы!</h2>
-<button class="btn btn-primary" onclick="something()">Нажми меня!</button>
+<center><h1>Добро пожаловать в магазин пиццы!</h1></center>
+<br><br>
+
+<div class="row">
+<% @products.each do |p| %>
+  	<div class="col-xs-12 col-md-4 col-sm-6">
+  		<center>
+  		<img src='<%= p.path_to_image %>' width="220px" height="150px">
+  		<h3><%= p.title %></h3>
+  		<h4 style="color: red"><%= p.price %> рублей</h4>
+  		</center>
+  	</div>
+<% end %>
+</div>
