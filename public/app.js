@@ -32,5 +32,6 @@ function cart_get_number_of_items()
 			cnt = cnt + value * 1;
 		}
 	}
+	
 	return cnt;
 }
