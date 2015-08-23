@@ -26,6 +26,12 @@ function update_orders_input()
 	$('#orders_input').val(orders);
 }
 
+function update_orders_button()
+{
+	var text = 'Корзина (' + cart_get_orders() + ')';
+	$('#orders_button').val(text)
+}
+
 function cart_get_orders()
 {
 	var orders = '';
