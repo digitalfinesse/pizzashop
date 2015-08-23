@@ -17,7 +17,7 @@ before do
 end
 
 get '/' do
-	@products = Product.order "price"
+	@products = Product.order "price DESC"
 	erb :index
 end
 
@@ -33,4 +33,8 @@ end
 
 get '/contacts' do
   erb :contacts
+end
+
+post '/cart' do
+  erb ""
 end
